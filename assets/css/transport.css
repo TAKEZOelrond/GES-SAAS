@@ -1,0 +1,54 @@
+.transport-mode-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.transport-mode-container select,
+.transport-mode-container input {
+    flex: 1;
+}
+
+.add-transport-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-transport-btn:hover {
+    background: #218838;
+}
+
+.remove-transport-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.remove-transport-btn:hover {
+    background: #c82333;
+}
+
+/* Champs spécifiques mixte */
+.distance-multiplier {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.distance-multiplier input {
+    width: 80px;
+}

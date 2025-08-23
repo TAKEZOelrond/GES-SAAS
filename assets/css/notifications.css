@@ -1,0 +1,15 @@
+.notification {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.auto-fill-notice {
+    background: #e7f3fe;
+    border-left: 5px solid #2196F3;
+    color: #0c5460;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+}

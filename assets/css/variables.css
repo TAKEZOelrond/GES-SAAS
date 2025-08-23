@@ -1,0 +1,58 @@
+/* Variables CSS pour la cohérence du design */
+:root {
+    /* Couleurs principales */
+    --primary-color: #FFD100;
+    --secondary-color: #003366;
+    --accent-color: #0044aa;
+    
+    /* Couleurs de texte */
+    --text-dark: #333;
+    --text-light: #666;
+    --text-white: #ffffff;
+    
+    /* Couleurs de fond */
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --bg-gradient: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+    
+    /* Ombres */
+    --shadow-light: 0 2px 10px rgba(0,0,0,0.1);
+    --shadow-medium: 0 4px 15px rgba(0,0,0,0.15);
+    --shadow-strong: 0 8px 25px rgba(0,0,0,0.2);
+    
+    /* Border radius */
+    --border-radius: 8px;
+    --border-radius-large: 12px;
+    
+    /* Espacements */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Typographie */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+    --font-size-4xl: 2.5rem;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Z-index */
+    --z-header: 100;
+    --z-modal: 1000;
+    --z-tooltip: 2000;
+    
+    /* Largeurs max */
+    --max-width-content: 1200px;
+    --max-width-text: 800px;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur Bilan GES - La Poste</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/categories.css">
+    <link rel="stylesheet" href="assets/css/info-section.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-laposte">
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-laposte">La Poste</div>
+                <h1 class="header-title">Engagement pour la neutralité carbone</h1>
+            </div>
+
+            <!-- Bouton menu mobile -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="accueil.html">🏠 Accueil</a></li>
+                    <li><a href="outil.html">🛠️ Outil</a></li>
+                    <li><a href="apropos.html">ℹ️ À propos</a></li>
+                    <li><a href="faq.html">❓ FAQ</a></li>
+                    <li><a href="contact.html">📞 Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <!-- Section héro -->
+        <section class="hero-section" data-aos="fade-up">
+            <h1 class="hero-title">Calculateur Bilan GES</h1>
+            <p class="hero-subtitle">Estimez et pilotez les émissions carbone de votre entité La Poste</p>
+            <a href="outil.html" class="cta-button" id="startEvaluation">Commencer l'évaluation</a>
+        </section>
+
+        <!-- Introduction restructurée -->
+        <section class="info-section" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="section-title">Pourquoi utiliser cet outil ?</h2>
+            <div class="info-grid">
+                <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>🎯 Objectif</h3>
+                    <p>Permet aux entités de La Poste d'estimer en autonomie leurs émissions carbone et d'identifier les postes d'émissions prioritaires.</p>
+                </div>
+                <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3>📊 Utilisation</h3>
+                    <p>Outil de pilotage pour une trajectoire de décarbonation locale. <strong>Ce n'est pas un outil de reporting</strong>, même s'il offre la possibilité de remonter de l'information.</p>
+                </div>
+                <div class="info-card" data-aos="fade-up" data-aos-delay="400">
+                    <h3>🔧 Données énergétiques</h3>
+                    <p>Les données énergétiques des bâtiments sont disponibles dans l'outil SOBRE. Contactez les RET, ROET, Contrôleurs de gestion ou la DEX si nécessaire.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catégories d'activités -->
+        <section class="categories-section" data-aos="fade-up" data-aos-delay="500">
+            <h2 class="section-title">Catégories d'activités évaluées</h2>
+            <div class="categories-grid" id="categoriesGrid">
+                <div class="category-card" data-category="batiments">
+                    <span class="category-icon">🏢</span>
+                    <h3 class="category-title">Bâtiments</h3>
+                    <p class="category-description">Consommation énergétique des locaux et infrastructures</p>
+                </div>
+                
+                <div class="category-card" data-category="flotte">
+                    <span class="category-icon">🚚</span>
+                    <h3 class="category-title">Flotte en propre</h3>
+                    <p class="category-description">Véhicules appartenant à votre entité</p>
+                </div>
+                
+                <div class="category-card" data-category="transport">
+                    <span class="category-icon">🚛</span>
+                    <h3 class="category-title">Transport sous-traité</h3>
+                    <p class="category-description">Services de transport externalisés</p>
+                </div>
+                
+                <div class="category-card" data-category="domicile-travail">
+                    <span class="category-icon">🏠➡️🏢</span>
+                    <h3 class="category-title">Déplacements domicile-travail</h3>
+                    <p class="category-description">Trajets quotidiens des collaborateurs</p>
+                </div>
+                
+                <div class="category-card" data-category="professionnels">
+                    <span class="category-icon">✈️</span>
+                    <h3 class="category-title">Déplacements professionnels</h3>
+                    <p class="category-description">Missions et voyages d'affaires</p>
+                </div>
+                
+                <div class="category-card" data-category="frequentation">
+                    <span class="category-icon">👥</span>
+                    <h3 class="category-title">Fréquentation</h3>
+                    <p class="category-description">Déplacements des clients et collaborateurs</p>
+                </div>
+                
+                <div class="category-card" data-category="alimentation">
+                    <span class="category-icon">🍽️</span>
+                    <h3 class="category-title">Alimentation</h3>
+                    <p class="category-description">Consommation alimentaire sur site</p>
+                </div>
+                
+                <div class="category-card" data-category="achats">
+                    <span class="category-icon">🛒</span>
+                    <h3 class="category-title">Achats</h3>
+                    <p class="category-description">Fournitures et équipements</p>
+                </div>
+                
+                <div class="category-card" data-category="restauration">
+                    <span class="category-icon">🍴</span>
+                    <h3 class="category-title">Restauration</h3>
+                    <p class="category-description">Services de restauration collective</p>
+                </div>
+                
+                <div class="category-card" data-category="dechets">
+                    <span class="category-icon">♻️</span>
+                    <h3 class="category-title">Déchets générés</h3>
+                    <p class="category-description">Gestion et traitement des déchets</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to action final -->
+        <section class="hero-section" data-aos="fade-up" data-aos-delay="600">
+            <h2 class="section-title">Prêt à commencer ?</h2>
+            <p style="margin-bottom: 2rem;">Une base de données de facteurs d'émissions est utilisée pour calculer automatiquement vos résultats.</p>
+            <a href="outil.html" class="cta-button">Lancer l'évaluation carbone</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 La Poste - Tous droits réservés</p>
+            <p>Engagement pour la neutralité carbone</p>
+        </div>
+    </footer>
+</body>
+</html>
