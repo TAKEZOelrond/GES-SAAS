@@ -95,7 +95,8 @@
 
 .category-card.selected::before {
     transform: scaleX(1);
-    background: var(--secondary-color);
+    background: var(--primary-color);
+    height: 5px;
 }
 
 .category-card.selected .category-title {

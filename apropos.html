@@ -5,19 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculateur Bilan GES - La Poste</title>
 
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/header.css">
-<link rel="stylesheet" href="assets/css/forms.css">
-<link rel="stylesheet" href="assets/css/transport.css">
-<link rel="stylesheet" href="assets/css/results.css">
-<link rel="stylesheet" href="assets/css/recommendations.css">
-<link rel="stylesheet" href="assets/css/notifications.css">
-<link rel="stylesheet" href="assets/css/buttons.css">
-<link rel="stylesheet" href="assets/css/animations.css">
-<link rel="stylesheet" href="assets/css/responsive.css">
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="assets/js/script.js" defer></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/simple-clear.css">
+    
+    <!-- JavaScript -->
+    <script src="assets/js/main.js" defer></script>
 </head>
 <body>
 
@@ -29,25 +21,285 @@
             <h1 class="header-title">Engagement pour la neutralité carbone</h1>
         </div>
 
+        <!-- Bouton menu mobile -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <!-- Menu de navigation -->
-        <nav class="main-nav">
+        <nav class="main-nav" id="mainNav">
             <ul class="nav-list">
                 <li><a href="accueil.html">Accueil</a></li>
                 <li><a href="outil.html">Outil</a></li>
                 <li><a href="apropos.html">À propos</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                
             </ul>
         </nav>
     </div>
 </header>
 
-<p class="home-intro">
+<main class="main-container" id="main-content">
+    <!-- Section héro À propos -->
+    <section class="hero-section" data-aos="fade-up">
+        <div class="hero-content">
+            <h1 class="hero-title">À propos du Calculateur Bilan GES</h1>
+            <p class="hero-subtitle">Comprendre l'importance et l'impact de la comptabilité carbone pour La Poste</p>
+            
+            <div class="hero-intro">
+                <p>La <strong>comptabilité carbone</strong> est devenue un enjeu majeur dans la lutte contre le réchauffement climatique. Notre outil vous accompagne dans cette démarche essentielle pour construire un avenir plus durable.</p>
+            </div>
+        </div>
+    </section>
 
-    A propos
+    <!-- Section Pourquoi un bilan GES -->
+    <section class="info-section" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="section-title">Pourquoi réaliser un bilan GES ?</h2>
+        
+        <div class="info-grid">
+            <div class="info-card highlight">
+                <div class="info-icon">🌍</div>
+                <h3>Engagement climatique</h3>
+                <p><strong>La Poste s'engage</strong> pour la neutralité carbone d'ici 2040. Chaque entité contribue à cet objectif ambitieux en mesurant et réduisant ses émissions de gaz à effet de serre.</p>
+            </div>
+            
+            <div class="info-card">
+                <div class="info-icon">📊</div>
+                <h3>Pilotage des actions</h3>
+                <p>Identifier les sources principales d'émissions permet de <strong>prioriser les actions</strong> les plus efficaces et de suivre les progrès dans le temps.</p>
+            </div>
+            
+            <div class="info-card">
+                <div class="info-icon">⚡</div>
+                <h3>Performance énergétique</h3>
+                <p>Optimiser la consommation énergétique des bâtiments, la flotte de véhicules et les déplacements professionnels pour <strong>réduire les coûts</strong> et l'impact environnemental.</p>
+            </div>
+        </div>
+    </section>
 
-</p>
+    <!-- Section Méthodologie -->
+    <section class="methodology-section" data-aos="fade-up" data-aos-delay="200">
+        <h2 class="section-title">Notre méthodologie</h2>
+        
+        <div class="methodology-content">
+            <div class="method-card">
+                <div class="method-number">1</div>
+                <h3>Collecte des données</h3>
+                <p>Rassemblement des informations sur toutes les activités génératrices d'émissions : énergie, transport, déchets, achats, etc.</p>
+                <ul>
+                    <li>Consommations énergétiques des bâtiments</li>
+                    <li>Kilométrages des véhicules de la flotte</li>
+                    <li>Données de transport sous-traité</li>
+                    <li>Déplacements des collaborateurs</li>
+                    <li>Déchets produits et leur traitement</li>
+                </ul>
+            </div>
+            
+            <div class="method-card">
+                <div class="method-number">2</div>
+                <h3>Application des facteurs d'émission</h3>
+                <p>Utilisation de la base de données officielle <strong>Base Carbone®</strong> de l'ADEME pour convertir les activités en équivalent CO2.</p>
+                <ul>
+                    <li>Facteurs d'émission actualisés</li>
+                    <li>Méthodologie reconnue et certifiée</li>
+                    <li>Périmètres 1, 2 et 3 du GHG Protocol</li>
+                    <li>Traçabilité des calculs</li>
+                </ul>
+            </div>
+            
+            <div class="method-card">
+                <div class="method-number">3</div>
+                <h3>Analyse et recommandations</h3>
+                <p>Interprétation des résultats et proposition d'actions concrètes pour réduire l'empreinte carbone.</p>
+                <ul>
+                    <li>Identification des postes prioritaires</li>
+                    <li>Benchmarking sectoriel</li>
+                    <li>Plan d'actions personnalisé</li>
+                    <li>Indicateurs de suivi</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Impact personnel et professionnel -->
+    <section class="impact-section" data-aos="fade-up" data-aos-delay="300">
+        <h2 class="section-title">Impact sur votre quotidien professionnel</h2>
+        
+        <div class="impact-grid">
+            <div class="impact-item">
+                <div class="impact-icon">👤</div>
+                <h3>Pour vous personnellement</h3>
+                <div class="impact-content">
+                    <h4>Sensibilisation</h4>
+                    <p>Comprendre l'impact de vos activités professionnelles sur l'environnement et développer des réflexes éco-responsables.</p>
+                    
+                    <h4>Compétences</h4>
+                    <p>Acquérir une expertise en comptabilité carbone, compétence de plus en plus recherchée sur le marché du travail.</p>
+                    
+                    <h4>Fierté</h4>
+                    <p>Contribuer activement à la transition écologique de La Poste et participer à un projet d'entreprise ambitieux.</p>
+                </div>
+            </div>
+            
+            <div class="impact-item">
+                <div class="impact-icon">🏢</div>
+                <h3>Pour votre entité</h3>
+                <div class="impact-content">
+                    <h4>Économies</h4>
+                    <p>Réduire les coûts énergétiques, optimiser les déplacements et améliorer l'efficacité opérationnelle.</p>
+                    
+                    <h4>Image</h4>
+                    <p>Renforcer la réputation environnementale de votre entité auprès des clients, partenaires et collaborateurs.</p>
+                    
+                    <h4>Conformité</h4>
+                    <p>Anticiper les réglementations futures et répondre aux exigences croissantes en matière de reporting carbone.</p>
+                </div>
+            </div>
+            
+            <div class="impact-item">
+                <div class="impact-icon">🌱</div>
+                <h3>Pour l'environnement</h3>
+                <div class="impact-content">
+                    <h4>Réduction des émissions</h4>
+                    <p>Chaque tonne de CO2 économisée contribue directement à l'atténuation du changement climatique.</p>
+                    
+                    <h4>Effet d'entraînement</h4>
+                    <p>Votre exemple inspire d'autres entités et collaborateurs à adopter des pratiques durables.</p>
+                    
+                    <h4>Innovation</h4>
+                    <p>Stimuler la recherche de solutions innovantes pour décarboner les activités de La Poste.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contexte La Poste -->
+    <section class="context-section" data-aos="fade-up" data-aos-delay="400">
+        <h2 class="section-title">L'engagement de La Poste</h2>
+        
+        <div class="context-content">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2021</div>
+                    <h3>Objectif neutralité carbone 2040</h3>
+                    <p>La Poste s'engage à atteindre la neutralité carbone sur l'ensemble de ses activités avec 9 ans d'avance sur les objectifs européens.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <h3>Stratégie de décarbonation</h3>
+                    <p>Déploiement du plan stratégique incluant l'électrification de la flotte, l'efficacité énergétique des bâtiments et l'optimisation logistique.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <h3>Outils de mesure</h3>
+                    <p>Création de ce calculateur GES pour permettre à chaque entité de mesurer et piloter ses émissions en autonomie.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <h3>Accélération</h3>
+                    <p>Intensification des actions de décarbonation avec des objectifs renforcés et de nouveaux outils digitaux.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Ressources et support -->
+    <section class="resources-section" data-aos="fade-up" data-aos-delay="500">
+        <h2 class="section-title">Ressources et accompagnement</h2>
+        
+        <div class="resources-grid">
+            <div class="resource-card">
+                <div class="resource-icon">📚</div>
+                <h3>Documentation</h3>
+                <p>Guides méthodologiques, fiches pratiques et tutoriels pour vous accompagner dans l'utilisation de l'outil.</p>
+                <a href="faq.html" class="resource-link">Consulter la FAQ</a>
+            </div>
+            
+            <div class="resource-card">
+                <div class="resource-icon">🎯</div>
+                <h3>Formation</h3>
+                <p>Sessions de formation en ligne et ateliers pratiques pour maîtriser la comptabilité carbone.</p>
+                <a href="contact.html" class="resource-link">Demander une formation</a>
+            </div>
+            
+            <div class="resource-card">
+                <div class="resource-icon">💬</div>
+                <h3>Support technique</h3>
+                <p>Équipe dédiée pour vous aider dans l'utilisation de l'outil et l'interprétation des résultats.</p>
+                <a href="contact.html" class="resource-link">Contacter le support</a>
+            </div>
+            
+            <div class="resource-card">
+                <div class="resource-icon">📊</div>
+                <h3>Outil SOBRE</h3>
+                <p>Accès aux données énergétiques détaillées de vos bâtiments via l'outil groupe SOBRE.</p>
+                <a href="#" class="resource-link">Accéder à SOBRE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Objectifs chiffrés -->
+    <section class="objectives-section" data-aos="fade-up" data-aos-delay="600">
+        <h2 class="section-title">Nos objectifs chiffrés</h2>
+        
+        <div class="objectives-stats">
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-value">-30%</div>
+                <div class="stat-label">Réduction d'émissions d'ici 2030</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Électrification de la flotte urbaine d'ici 2030</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">🏗️</div>
+                <div class="stat-value">-40%</div>
+                <div class="stat-label">Consommation énergétique des bâtiments d'ici 2030</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">♻️</div>
+                <div class="stat-value">0</div>
+                <div class="stat-label">Déchet en décharge d'ici 2025</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="cta-section" data-aos="fade-up" data-aos-delay="700">
+        <div class="cta-content">
+            <h2>Prêt à commencer votre bilan carbone ?</h2>
+            <p>Rejoignez les centaines d'entités La Poste qui utilisent déjà notre outil pour mesurer et réduire leur impact environnemental.</p>
+            <div class="cta-buttons">
+                <a href="outil.html" class="cta-button primary">🚀 Calculer mon bilan</a>
+                <a href="faq.html" class="cta-button secondary">❓ Questions fréquentes</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2025 La Poste - Tous droits réservés</p>
+        <p>Engagement pour la neutralité carbone</p>
+    </div>
+</footer>
+
+<!-- Conteneur de notifications -->
+<div id="notificationContainer" class="notification-container"></div>
+
+<!-- Bouton back-to-top -->
+<button id="backToTop" class="back-to-top" aria-label="Retour en haut">↑</button>
 
 </body>
 </html>

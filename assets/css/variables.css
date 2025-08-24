@@ -1,58 +1,133 @@
-/* Variables CSS pour la cohérence du design */
+/* Variables CSS pour un design professionnel et convivial - La Poste GES */
 :root {
-    /* Couleurs principales */
-    --primary-color: #FFD100;
-    --secondary-color: #003366;
-    --accent-color: #0044aa;
+    /* Palette couleurs La Poste harmonisée */
+    --primary-color: #FFD100;          /* Jaune La Poste - énergique et optimiste */
+    --primary-light: #FFF566;          /* Jaune clair pour les survols */
+    --primary-dark: #E6BB00;           /* Jaune foncé pour les états actifs */
     
-    /* Couleurs de texte */
-    --text-dark: #333;
-    --text-light: #666;
-    --text-white: #ffffff;
+    --secondary-color: #003366;        /* Bleu La Poste - professionnel et fiable */
+    --secondary-light: #1a4d7a;       /* Bleu moyen pour les variations */
+    --secondary-dark: #002244;        /* Bleu très foncé pour les contrastes */
     
-    /* Couleurs de fond */
-    --bg-light: #f8f9fa;
-    --bg-white: #ffffff;
-    --bg-gradient: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+    --accent-color: #0066CC;           /* Bleu accent - dynamique et moderne */
+    --accent-light: #3385D6;          /* Bleu accent clair */
+    --accent-dark: #004A99;           /* Bleu accent foncé */
     
-    /* Ombres */
-    --shadow-light: 0 2px 10px rgba(0,0,0,0.1);
-    --shadow-medium: 0 4px 15px rgba(0,0,0,0.15);
-    --shadow-strong: 0 8px 25px rgba(0,0,0,0.2);
+    /* Couleurs d'état - friendly et rassurantes */
+    --success-color: #28A745;         /* Vert succès */
+    --success-light: #5CBB6B;         
+    --warning-color: #FFC107;         /* Orange attention */
+    --warning-light: #FFCD39;         
+    --error-color: #DC3545;           /* Rouge erreur */
+    --error-light: #E85D6B;           
+    --info-color: #17A2B8;            /* Cyan information */
+    --info-light: #46B5C7;            
     
-    /* Border radius */
-    --border-radius: 8px;
-    --border-radius-large: 12px;
+    /* Couleurs de texte - lisibilité optimale */
+    --text-primary: #2C3E50;          /* Texte principal - plus doux que le noir pur */
+    --text-secondary: #5A6C7D;        /* Texte secondaire */
+    --text-muted: #7B8794;            /* Texte discret */
+    --text-light: #95A3B3;            /* Texte très clair */
+    --text-white: #FFFFFF;            /* Texte blanc */
+    --text-on-primary: #003366;       /* Texte sur fond jaune */
     
-    /* Espacements */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
+    /* Couleurs de fond - atmosphère welcoming */
+    --bg-body: #FDFDFD;               /* Fond principal - blanc cassé chaleureux */
+    --bg-white: #FFFFFF;              /* Fond blanc pur pour les cartes */
+    --bg-light: #F8FAFB;              /* Fond très clair */
+    --bg-lighter: #F1F4F6;            /* Fond clair pour les sections */
+    --bg-overlay: rgba(0, 51, 102, 0.95); /* Overlay modal */
     
-    /* Typographie */
-    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-size-xs: 0.75rem;
-    --font-size-sm: 0.875rem;
-    --font-size-base: 1rem;
-    --font-size-lg: 1.125rem;
-    --font-size-xl: 1.25rem;
-    --font-size-2xl: 1.5rem;
-    --font-size-3xl: 2rem;
-    --font-size-4xl: 2.5rem;
+    /* Gradients élégants */
+    --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+    --gradient-soft: linear-gradient(135deg, #F8FAFB 0%, #FFFFFF 100%);
+    --gradient-hero: linear-gradient(135deg, rgba(0, 51, 102, 0.05) 0%, rgba(0, 102, 204, 0.05) 100%);
     
-    /* Transitions */
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.3s ease;
-    --transition-slow: 0.5s ease;
+    /* Ombres subtiles et professionnelles */
+    --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.10);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.14);
+    --shadow-colored: 0 4px 16px rgba(255, 209, 0, 0.25);
+    --shadow-blue: 0 4px 16px rgba(0, 102, 204, 0.20);
     
-    /* Z-index */
-    --z-header: 100;
-    --z-modal: 1000;
-    --z-tooltip: 2000;
+    /* Border radius moderne */
+    --radius-xs: 4px;
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 50%;
     
-    /* Largeurs max */
-    --max-width-content: 1200px;
-    --max-width-text: 800px;
+    /* Espacements harmonieux */
+    --space-1: 0.25rem;   /* 4px */
+    --space-2: 0.5rem;    /* 8px */
+    --space-3: 0.75rem;   /* 12px */
+    --space-4: 1rem;      /* 16px */
+    --space-5: 1.25rem;   /* 20px */
+    --space-6: 1.5rem;    /* 24px */
+    --space-8: 2rem;      /* 32px */
+    --space-10: 2.5rem;   /* 40px */
+    --space-12: 3rem;     /* 48px */
+    --space-16: 4rem;     /* 64px */
+    --space-20: 5rem;     /* 80px */
+    --space-24: 6rem;     /* 96px */
+    
+    /* Typographie moderne et lisible */
+    --font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-family-mono: 'JetBrains Mono', 'Fira Code', 'Monaco', monospace;
+    
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+    
+    --font-size-xs: 0.75rem;    /* 12px */
+    --font-size-sm: 0.875rem;   /* 14px */
+    --font-size-base: 1rem;     /* 16px */
+    --font-size-lg: 1.125rem;   /* 18px */
+    --font-size-xl: 1.25rem;    /* 20px */
+    --font-size-2xl: 1.5rem;    /* 24px */
+    --font-size-3xl: 2rem;      /* 32px */
+    --font-size-4xl: 2.5rem;    /* 40px */
+    --font-size-5xl: 3rem;      /* 48px */
+    
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+    
+    /* Transitions fluides */
+    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Z-index organisé */
+    --z-base: 0;
+    --z-dropdown: 10;
+    --z-sticky: 20;
+    --z-header: 30;
+    --z-overlay: 40;
+    --z-modal: 50;
+    --z-tooltip: 60;
+    
+    /* Largeurs responsives */
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+    --container-2xl: 1536px;
+    
+    --content-max: 1200px;
+    --text-max: 65ch;
+    
+    /* Breakpoints */
+    --bp-sm: 640px;
+    --bp-md: 768px;
+    --bp-lg: 1024px;
+    --bp-xl: 1280px;
 }

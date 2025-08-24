@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats Bilan GES - La Poste</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/simple-clear.css">
+    
+    <!-- Chart.js pour les graphiques -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+
+    <!-- Header La Poste -->
+    <header class="header-laposte">
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-laposte">La Poste</div>
+                <h1 class="header-title">Engagement pour la neutralité carbone</h1>
+            </div>
+
+            <!-- Bouton menu mobile -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Menu de navigation -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="outil.html">Outil</a></li>
+                    <li><a href="resultats.html">Résultats</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container" id="main-content">
+        <!-- En-tête des résultats -->
+        <section class="results-header" data-aos="fade-up">
+            <h1 class="results-title">📊 Résultats du Bilan GES</h1>
+            <p class="results-subtitle">Analyse détaillée des émissions de gaz à effet de serre</p>
+            
+            <!-- Informations du bilan -->
+            <div class="bilan-info">
+                <div class="info-item">
+                    <strong>Entité :</strong> <span id="entityName">Centre de distribution Paris Nord</span>
+                </div>
+                <div class="info-item">
+                    <strong>Période :</strong> <span id="reportPeriod">Année 2024</span>
+                </div>
+                <div class="info-item">
+                    <strong>Date de calcul :</strong> <span id="calculationDate">24 janvier 2025</span>
+                </div>
+                <div class="info-item">
+                    <strong>Responsable :</strong> <span id="responsiblePerson">Marie Dupont</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Résultats principaux -->
+        <section class="main-results" data-aos="fade-up" data-aos-delay="100">
+            <h2>📈 Synthèse des émissions</h2>
+            
+            <div class="results-grid">
+                <div class="result-card primary">
+                    <div class="result-icon">🌍</div>
+                    <h3>Émissions totales</h3>
+                    <div class="result-value" id="totalEmissions" data-target="125.7">125,7</div>
+                    <div class="result-unit">tonnes CO₂eq/an</div>
+                    <div class="result-trend positive">
+                        <span class="trend-icon">↗️</span>
+                        <span class="trend-text">+5% vs objectif</span>
+                    </div>
+                </div>
+                
+                <div class="result-card secondary">
+                    <div class="result-icon">👤</div>
+                    <h3>Par collaborateur</h3>
+                    <div class="result-value" id="perEmployee" data-target="2.8">2,8</div>
+                    <div class="result-unit">tonnes CO₂eq/personne/an</div>
+                    <div class="result-trend neutral">
+                        <span class="trend-icon">➡️</span>
+                        <span class="trend-text">Dans la moyenne secteur</span>
+                    </div>
+                </div>
+                
+                <div class="result-card accent">
+                    <div class="result-icon">🎯</div>
+                    <h3>Catégorie principale</h3>
+                    <div class="result-value text" id="mainCategory">Transport</div>
+                    <div class="result-unit">45% des émissions totales</div>
+                    <div class="result-trend negative">
+                        <span class="trend-icon">📈</span>
+                        <span class="trend-text">Potentiel d'amélioration</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Répartition par catégories -->
+        <section class="categories-breakdown" data-aos="fade-up" data-aos-delay="200">
+            <h2>🔍 Répartition des émissions par catégorie</h2>
+            
+            <div class="breakdown-container">
+                <div class="chart-container">
+                    <canvas id="categoryChart" width="400" height="400"></canvas>
+                </div>
+                
+                <div class="categories-list">
+                    <div class="category-item">
+                        <div class="category-color" style="background-color: #FF6384;"></div>
+                        <div class="category-details">
+                            <h4>Transport et mobilité</h4>
+                            <div class="category-value">56,5 t CO₂eq</div>
+                            <div class="category-percentage">45%</div>
+                        </div>
+                        <div class="category-trend">📈</div>
+                    </div>
+                    
+                    <div class="category-item">
+                        <div class="category-color" style="background-color: #36A2EB;"></div>
+                        <div class="category-details">
+                            <h4>Bâtiments et énergie</h4>
+                            <div class="category-value">38,2 t CO₂eq</div>
+                            <div class="category-percentage">30%</div>
+                        </div>
+                        <div class="category-trend">✅</div>
+                    </div>
+                    
+                    <div class="category-item">
+                        <div class="category-color" style="background-color: #FFCE56;"></div>
+                        <div class="category-details">
+                            <h4>Achats et services</h4>
+                            <div class="category-value">18,9 t CO₂eq</div>
+                            <div class="category-percentage">15%</div>
+                        </div>
+                        <div class="category-trend">➡️</div>
+                    </div>
+                    
+                    <div class="category-item">
+                        <div class="category-color" style="background-color: #4BC0C0;"></div>
+                        <div class="category-details">
+                            <h4>Alimentation</h4>
+                            <div class="category-value">7,5 t CO₂eq</div>
+                            <div class="category-percentage">6%</div>
+                        </div>
+                        <div class="category-trend">👍</div>
+                    </div>
+                    
+                    <div class="category-item">
+                        <div class="category-color" style="background-color: #9966FF;"></div>
+                        <div class="category-details">
+                            <h4>Déchets</h4>
+                            <div class="category-value">5,0 t CO₂eq</div>
+                            <div class="category-percentage">4%</div>
+                        </div>
+                        <div class="category-trend">♻️</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analyse détaillée -->
+        <section class="detailed-analysis" data-aos="fade-up" data-aos-delay="300">
+            <h2>🧠 Analyse et interprétation</h2>
+            
+            <div class="analysis-grid">
+                <div class="analysis-card positive">
+                    <div class="analysis-header">
+                        <div class="analysis-icon">✅</div>
+                        <h3>Points forts</h3>
+                    </div>
+                    <ul class="analysis-list">
+                        <li><strong>Efficacité énergétique :</strong> Consommation des bâtiments maîtrisée (30% du total)</li>
+                        <li><strong>Gestion des déchets :</strong> Excellent taux de recyclage (4% seulement)</li>
+                        <li><strong>Télétravail :</strong> 40% des collaborateurs, réduction significative des trajets</li>
+                        <li><strong>Alimentation :</strong> 25% de repas végétariens, impact réduit</li>
+                    </ul>
+                </div>
+                
+                <div class="analysis-card warning">
+                    <div class="analysis-header">
+                        <div class="analysis-icon">⚠️</div>
+                        <h3>Points d'attention</h3>
+                    </div>
+                    <ul class="analysis-list">
+                        <li><strong>Transport dominant :</strong> 45% des émissions, principalement flotte diesel</li>
+                        <li><strong>Déplacements professionnels :</strong> Usage important de l'avion (15% du transport)</li>
+                        <li><strong>Achats informatiques :</strong> Renouvellement fréquent des équipements</li>
+                        <li><strong>Transport sous-traité :</strong> Manque de données sur les prestataires</li>
+                    </ul>
+                </div>
+                
+                <div class="analysis-card improvement">
+                    <div class="analysis-header">
+                        <div class="analysis-icon">🎯</div>
+                        <h3>Pistes d'amélioration</h3>
+                    </div>
+                    <ul class="analysis-list">
+                        <li><strong>Électrification de la flotte :</strong> Potentiel de -30% sur le transport</li>
+                        <li><strong>Optimisation des tournées :</strong> Réduction des kilomètres parcourus</li>
+                        <li><strong>Visioconférence :</strong> Limiter les déplacements professionnels</li>
+                        <li><strong>Achats responsables :</strong> Critères environnementaux renforcés</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparaisons et benchmarking -->
+        <section class="benchmarking" data-aos="fade-up" data-aos-delay="400">
+            <h2>📊 Comparaison sectorielle</h2>
+            
+            <div class="benchmark-container">
+                <div class="benchmark-chart">
+                    <canvas id="benchmarkChart" width="600" height="300"></canvas>
+                </div>
+                
+                <div class="benchmark-analysis">
+                    <h3>Position vs secteur</h3>
+                    <div class="benchmark-item">
+                        <span class="benchmark-label">Votre entité :</span>
+                        <div class="benchmark-bar">
+                            <div class="benchmark-fill" style="width: 75%; background-color: #FFD100;"></div>
+                        </div>
+                        <span class="benchmark-value">2,8 t CO₂eq/pers</span>
+                    </div>
+                    
+                    <div class="benchmark-item">
+                        <span class="benchmark-label">Moyenne secteur :</span>
+                        <div class="benchmark-bar">
+                            <div class="benchmark-fill" style="width: 85%; background-color: #6c757d;"></div>
+                        </div>
+                        <span class="benchmark-value">3,2 t CO₂eq/pers</span>
+                    </div>
+                    
+                    <div class="benchmark-item">
+                        <span class="benchmark-label">Objectif 2030 :</span>
+                        <div class="benchmark-bar">
+                            <div class="benchmark-fill" style="width: 50%; background-color: #28a745;"></div>
+                        </div>
+                        <span class="benchmark-value">1,9 t CO₂eq/pers</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plan d'actions recommandé -->
+        <section class="action-plan" data-aos="fade-up" data-aos-delay="500">
+            <h2>🚀 Plan d'actions recommandé</h2>
+            
+            <div class="actions-timeline">
+                <div class="action-item immediate">
+                    <div class="action-timeline-dot"></div>
+                    <div class="action-content">
+                        <h3>🔥 Actions immédiates (0-6 mois)</h3>
+                        <ul>
+                            <li><strong>Formation éco-conduite</strong> - Réduction 10-15% consommation carburant</li>
+                            <li><strong>Politique voyage d'affaires</strong> - Privilégier train vs avion < 4h</li>
+                            <li><strong>Optimisation des tournées</strong> - Outils de routage intelligent</li>
+                            <li><strong>Sensibilisation collaborateurs</strong> - Campagne mobilité douce</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="action-item short-term">
+                    <div class="action-timeline-dot"></div>
+                    <div class="action-content">
+                        <h3>📅 Court terme (6-18 mois)</h3>
+                        <ul>
+                            <li><strong>Renouvellement flotte</strong> - 30% véhicules électriques/hybrides</li>
+                            <li><strong>Infrastructure de recharge</strong> - Bornes électriques sur site</li>
+                            <li><strong>Télétravail renforcé</strong> - Passer à 50% des collaborateurs</li>
+                            <li><strong>Achats durables</strong> - Critères environnementaux dans appels d'offres</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="action-item long-term">
+                    <div class="action-timeline-dot"></div>
+                    <div class="action-content">
+                        <h3>🎯 Long terme (18 mois - 3 ans)</h3>
+                        <ul>
+                            <li><strong>Neutralité carbone transport</strong> - 80% flotte décarbonée</li>
+                            <li><strong>Énergie renouvelable</strong> - Panneaux solaires + contrat vert</li>
+                            <li><strong>Économie circulaire</strong> - Réemploi équipements informatiques</li>
+                            <li><strong>Partenariats verts</strong> - Prestataires certifiés environnement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Actions de rapport -->
+        <section class="report-actions" data-aos="fade-up" data-aos-delay="600">
+            <h2>📄 Actions et export</h2>
+            
+            <div class="actions-container">
+                <button class="btn btn-primary" id="exportPDF">
+                    📄 Exporter en PDF
+                </button>
+                <button class="btn btn-secondary" id="exportExcel">
+                    📊 Exporter données Excel
+                </button>
+                <button class="btn btn-outline" id="shareResults">
+                    📤 Partager les résultats
+                </button>
+                <button class="btn btn-outline" id="newCalculation">
+                    🔄 Nouveau calcul
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 La Poste - Tous droits réservés</p>
+            <p>Engagement pour la neutralité carbone</p>
+        </div>
+    </footer>
+
+    <!-- Conteneur de notifications -->
+    <div id="notificationContainer" class="notification-container"></div>
+
+    <!-- Bouton back-to-top -->
+    <button id="backToTop" class="back-to-top" aria-label="Retour en haut">↑</button>
+
+</body>
+</html>

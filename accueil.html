@@ -6,13 +6,7 @@
     <title>Calculateur Bilan GES - La Poste</title>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/variables.css">
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/hero.css">
-    <link rel="stylesheet" href="assets/css/categories.css">
-    <link rel="stylesheet" href="assets/css/info-section.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/simple-clear.css">
     
     <!-- JavaScript -->
     <script src="assets/js/main.js" defer></script>
@@ -35,115 +29,137 @@
 
             <nav class="main-nav" id="mainNav">
                 <ul class="nav-list">
-                    <li><a href="accueil.html">🏠 Accueil</a></li>
-                    <li><a href="outil.html">🛠️ Outil</a></li>
-                    <li><a href="apropos.html">ℹ️ À propos</a></li>
-                    <li><a href="faq.html">❓ FAQ</a></li>
-                    <li><a href="contact.html">📞 Contact</a></li>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="outil.html">Outil</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="main-container">
+    <main class="main-container" id="main-content">
         <!-- Section héro -->
         <section class="hero-section" data-aos="fade-up">
-            <h1 class="hero-title">Calculateur Bilan GES</h1>
-            <p class="hero-subtitle">Estimez et pilotez les émissions carbone de votre entité La Poste</p>
-            <a href="outil.html" class="cta-button" id="startEvaluation">Commencer l'évaluation</a>
-        </section>
+            <div class="hero-content">
+                <h1 class="hero-title">Calculateur Bilan GES</h1>
+                <p class="hero-subtitle">Estimez et pilotez les émissions carbone de votre entité La Poste</p>
+                
+                <div class="hero-intro">
+                    <p><strong>La comptabilité carbone</strong>est une notion essentielle de la lutte contre le réchauffement climatique.
+Cet outil permet aux entités de La Poste d’estimer en autonomie les émissions carbone de leur périmètre, d’identifier les différents postes d’émissions et de piloter une trajectoire de décarbonation locale. Ce n’est pas un outil de reporting même s’il offre la possibilité de remonter de l’information. L’utilisateur a la possibilité de décrire les activités de son entité au travers des catégories suivantes : Bâtiments, Flotte en propre, Transport sous-traité, Déplacements domicile-travail, Déplacements professionnels, Fréquentation [des clients et des collaborateurs], Alimentation, Achats, restauration et Déchets générés. Pour les données énergétiques liées à la consommation des bâtiments, celles-ci sont disponibles dans l’outil du groupe SOBRE. Si vous ne pouvez accéder à un tel outil pour obtenir vos consommations énergétique vous pouvez vous adresser (aux RET, ROET, Contrôleurs de gestion ou à la DEX) ou en consultant la présente base de donnée non exhaustive.
+Une base de données de facteurs d’émissions est utilisée pour calculer les émissions présentées sur la page Résultats
+</p>
 
-        <!-- Introduction restructurée -->
-        <section class="info-section" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="section-title">Pourquoi utiliser cet outil ?</h2>
-            <div class="info-grid">
-                <div class="info-card" data-aos="fade-up" data-aos-delay="200">
-                    <h3>🎯 Objectif</h3>
-                    <p>Permet aux entités de La Poste d'estimer en autonomie leurs émissions carbone et d'identifier les postes d'émissions prioritaires.</p>
                 </div>
-                <div class="info-card" data-aos="fade-up" data-aos-delay="300">
-                    <h3>📊 Utilisation</h3>
-                    <p>Outil de pilotage pour une trajectoire de décarbonation locale. <strong>Ce n'est pas un outil de reporting</strong>, même s'il offre la possibilité de remonter de l'information.</p>
-                </div>
-                <div class="info-card" data-aos="fade-up" data-aos-delay="400">
-                    <h3>🔧 Données énergétiques</h3>
-                    <p>Les données énergétiques des bâtiments sont disponibles dans l'outil SOBRE. Contactez les RET, ROET, Contrôleurs de gestion ou la DEX si nécessaire.</p>
+
+                <div class="cta-container">
+                    <a href="outil.html" class="cta-button primary" id="startEvaluation">
+                        🚀 Commencer l'évaluation
+                    </a>
+                    <a href="apropos.html" class="cta-button secondary">
+                        📖 En savoir plus
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Catégories d'activités -->
-        <section class="categories-section" data-aos="fade-up" data-aos-delay="500">
-            <h2 class="section-title">Catégories d'activités évaluées</h2>
-            <div class="categories-grid" id="categoriesGrid">
-                <div class="category-card" data-category="batiments">
-                    <span class="category-icon">🏢</span>
+        <!-- Section fonctionnalités clés -->
+        <section class="features-section" data-aos="fade-up" data-aos-delay="100">
+            <div class="features-list">
+                <h2 class="section-title">Fonctionnalités principales</h2>
+                
+                <div class="features-items">
+                    <span class="feature-item-list" data-aos="fade-up" data-aos-delay="200">
+                        <span class="icon">🎯</span>
+                        Estimation autonome des émissions
+                    </span>
+                    
+                    <span class="feature-item-list" data-aos="fade-up" data-aos-delay="250">
+                        <span class="icon">📊</span>
+                        Pilotage de décarbonation locale
+                    </span>
+                    
+                    <span class="feature-item-list" data-aos="fade-up" data-aos-delay="300">
+                        <span class="icon">🔬</span>
+                        Base de données de facteurs d'émissions
+                    </span>
+                    
+                    <span class="feature-item-list" data-aos="fade-up" data-aos-delay="350">
+                        <span class="icon">🏢</span>
+                        Identification des postes d'émissions
+                    </span>
+                    
+                    <span class="feature-item-list" data-aos="fade-up" data-aos-delay="400">
+                        <span class="icon">📈</span>
+                        Trajectoire de décarbonation
+                    </span>
+                    
+                    <span class="feature-item-list" data-aos="fade-up" data-aos-delay="450">
+                        <span class="icon">📋</span>
+                        Calcul automatisé des résultats
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section catégories -->
+        <section class="categories-section" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="section-title">Catégories d'activités analysées</h2>
+            
+            <div class="categories-grid">
+                <div class="category-card" data-category="batiments" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-icon">🏢</div>
                     <h3 class="category-title">Bâtiments</h3>
-                    <p class="category-description">Consommation énergétique des locaux et infrastructures</p>
+                    <p class="category-description">Consommation énergétique des bâtiments</p>
                 </div>
                 
-                <div class="category-card" data-category="flotte">
-                    <span class="category-icon">🚚</span>
+                <div class="category-card" data-category="flotte" data-aos="fade-up" data-aos-delay="350">
+                    <div class="category-icon">🚗</div>
                     <h3 class="category-title">Flotte en propre</h3>
-                    <p class="category-description">Véhicules appartenant à votre entité</p>
+                    <p class="category-description">Véhicules de service et utilitaires</p>
                 </div>
                 
-                <div class="category-card" data-category="transport">
-                    <span class="category-icon">🚛</span>
+                <div class="category-card" data-category="transport-st" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-icon">🚚</div>
                     <h3 class="category-title">Transport sous-traité</h3>
-                    <p class="category-description">Services de transport externalisés</p>
+                    <p class="category-description">Prestations de transport externes</p>
                 </div>
                 
-                <div class="category-card" data-category="domicile-travail">
-                    <span class="category-icon">🏠➡️🏢</span>
+                <div class="category-card" data-category="domicile-travail" data-aos="fade-up" data-aos-delay="450">
+                    <div class="category-icon">🏠</div>
                     <h3 class="category-title">Déplacements domicile-travail</h3>
                     <p class="category-description">Trajets quotidiens des collaborateurs</p>
                 </div>
                 
-                <div class="category-card" data-category="professionnels">
-                    <span class="category-icon">✈️</span>
+                <div class="category-card" data-category="deplacements-pro" data-aos="fade-up" data-aos-delay="500">
+                    <div class="category-icon">✈️</div>
                     <h3 class="category-title">Déplacements professionnels</h3>
                     <p class="category-description">Missions et voyages d'affaires</p>
                 </div>
                 
-                <div class="category-card" data-category="frequentation">
-                    <span class="category-icon">👥</span>
-                    <h3 class="category-title">Fréquentation</h3>
-                    <p class="category-description">Déplacements des clients et collaborateurs</p>
-                </div>
-                
-                <div class="category-card" data-category="alimentation">
-                    <span class="category-icon">🍽️</span>
+                <div class="category-card" data-category="alimentation" data-aos="fade-up" data-aos-delay="600">
+                    <div class="category-icon">🍽️</div>
                     <h3 class="category-title">Alimentation</h3>
-                    <p class="category-description">Consommation alimentaire sur site</p>
+                    <p class="category-description">Restauration d'entreprise</p>
                 </div>
                 
-                <div class="category-card" data-category="achats">
-                    <span class="category-icon">🛒</span>
-                    <h3 class="category-title">Achats</h3>
-                    <p class="category-description">Fournitures et équipements</p>
+                <div class="category-card" data-category="achats" data-aos="fade-up" data-aos-delay="650">
+                    <div class="category-icon">🛒</div>
+                    <h3 class="category-title">Achats & Restauration</h3>
+                    <p class="category-description">Fournitures et services</p>
                 </div>
                 
-                <div class="category-card" data-category="restauration">
-                    <span class="category-icon">🍴</span>
-                    <h3 class="category-title">Restauration</h3>
-                    <p class="category-description">Services de restauration collective</p>
-                </div>
-                
-                <div class="category-card" data-category="dechets">
-                    <span class="category-icon">♻️</span>
+                <div class="category-card" data-category="dechets" data-aos="fade-up" data-aos-delay="700">
+                    <div class="category-icon">♻️</div>
                     <h3 class="category-title">Déchets générés</h3>
                     <p class="category-description">Gestion et traitement des déchets</p>
                 </div>
             </div>
         </section>
 
-        <!-- Call to action final -->
-        <section class="hero-section" data-aos="fade-up" data-aos-delay="600">
-            <h2 class="section-title">Prêt à commencer ?</h2>
-            <p style="margin-bottom: 2rem;">Une base de données de facteurs d'émissions est utilisée pour calculer automatiquement vos résultats.</p>
-            <a href="outil.html" class="cta-button">Lancer l'évaluation carbone</a>
-        </section>
+        
     </main>
 
     <!-- Footer -->
@@ -153,5 +169,11 @@
             <p>Engagement pour la neutralité carbone</p>
         </div>
     </footer>
+
+    <!-- Conteneur de notifications -->
+    <div id="notificationContainer" class="notification-container"></div>
+
+    <!-- Bouton back-to-top -->
+    <button id="backToTop" class="back-to-top" aria-label="Retour en haut">↑</button>
 </body>
 </html>
