@@ -14,199 +14,182 @@
 <body>
 
     <!-- Header La Poste -->
- <header class="header-laposte">
-    <div class="header-content">
-        <div class="logo-container">
-            <div class="logo-laposte">La Poste</div>
-            <h1 class="header-title">Engagement pour la neutralité carbone</h1>
+    <header class="header-laposte">
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-laposte">La Poste</div>
+                <h1 class="header-title">Engagement pour la neutralité carbone</h1>
+            </div>
+
+            <!-- Bouton menu mobile -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Menu de navigation -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="outil.html">Outil</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="faq.html" class="active">FAQ</a></li>
+                    <li><a href="resultats.html">Résultats</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <!-- Bouton menu mobile -->
-        <button class="mobile-menu-toggle" id="mobileMenuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+    <main class="main-container" id="main-content">
+        <!-- Section héro FAQ -->
+        <section class="hero-section" data-aos="fade-up">
+            <div class="hero-content">
+                <h1 class="hero-title">Questions fréquentes</h1>
+                <p class="hero-subtitle">Trouvez rapidement les réponses à vos questions sur le calculateur Bilan GES</p>
+                
+                <div class="hero-intro">
+                    <p>Découvrez les réponses aux questions les plus courantes sur l'utilisation de notre <strong>calculateur de bilan carbone</strong>. Notre équipe a rassemblé ici toutes les informations essentielles pour vous accompagner.</p>
+                </div>
 
-        <!-- Menu de navigation -->
-        <nav class="main-nav" id="mainNav">
-            <ul class="nav-list">
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="outil.html">Outil</a></li>
-                <li><a href="apropos.html">À propos</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+                <div class="cta-container">
+                    <a href="outil.html" class="cta-button primary">
+                        🚀 Calculer mon bilan
+                    </a>
+                    <a href="apropos.html" class="cta-button secondary">
+                        📖 En savoir plus
+                    </a>
+                </div>
+            </div>
+        </section>
 
-<main class="main-container" id="main-content">
-    <!-- Section héro FAQ -->
-    <section class="hero-section" data-aos="fade-up">
-        <div class="hero-content">
-            <h1 class="hero-title">Questions fréquentes</h1>
-            <p class="hero-subtitle">Trouvez rapidement les réponses à vos questions sur le calculateur Bilan GES</p>
+        <!-- Section navigation des catégories -->
+        <section class="features-section" data-aos="fade-up" data-aos-delay="100">
+            <div class="features-list">
+                <h2 class="section-title">Explorer par catégorie</h2>
+                
+                <div class="features-items">
+                    <span class="feature-item-list faq-filter" data-category="general" data-aos="fade-up" data-aos-delay="200">
+                        <span class="icon">❓</span>
+                        Questions générales
+                    </span>
+                    
+                    <span class="feature-item-list faq-filter" data-category="utilisation" data-aos="fade-up" data-aos-delay="250">
+                        <span class="icon">🛠️</span>
+                        Utilisation de l'outil
+                    </span>
+                    
+                    <span class="feature-item-list faq-filter" data-category="calculs" data-aos="fade-up" data-aos-delay="300">
+                        <span class="icon">🧮</span>
+                        Calculs et méthodologie
+                    </span>
+                    
+                    <span class="feature-item-list faq-filter" data-category="resultats" data-aos="fade-up" data-aos-delay="350">
+                        <span class="icon">📊</span>
+                        Interprétation des résultats
+                    </span>
+                    
+                    <span class="feature-item-list faq-filter" data-category="technique" data-aos="fade-up" data-aos-delay="400">
+                        <span class="icon">⚙️</span>
+                        Questions techniques
+                    </span>
+                    
+                    <span class="feature-item-list faq-filter active" data-category="all" data-aos="fade-up" data-aos-delay="450">
+                        <span class="icon">📋</span>
+                        Toutes les questions
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section FAQ - Questions Générales -->
+        <section class="categories-section" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="section-title">Questions générales</h2>
             
-            <div class="faq-search">
-                <input type="text" id="faqSearch" placeholder="Rechercher dans les questions..." class="search-input">
-                <button class="search-btn" id="searchBtn">🔍</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Navigation par catégories de FAQ -->
-    <nav class="faq-nav" data-aos="fade-up" data-aos-delay="100">
-        <button class="faq-tab active" data-category="all">Toutes</button>
-        <button class="faq-tab" data-category="general">Général</button>
-        <button class="faq-tab" data-category="utilisation">Utilisation</button>
-        <button class="faq-tab" data-category="calculs">Calculs</button>
-        <button class="faq-tab" data-category="resultats">Résultats</button>
-        <button class="faq-tab" data-category="technique">Technique</button>
-    </nav>
-
-    <!-- Section FAQ -->
-    <section class="faq-section" data-aos="fade-up" data-aos-delay="200">
-        
-        <!-- Questions Générales -->
-        <div class="faq-category" data-category="general">
-            
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Qu'est-ce qu'un bilan GES et pourquoi est-ce important ?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Un <strong>bilan GES (Gaz à Effet de Serre)</strong> est un inventaire des émissions de gaz à effet de serre générées par les activités d'une organisation. Il permet de :</p>
-                    <ul>
-                        <li>Identifier les principales sources d'émissions</li>
-                        <li>Définir une stratégie de réduction adaptée</li>
-                        <li>Suivre les progrès dans le temps</li>
-                        <li>Répondre aux obligations réglementaires</li>
-                        <li>Améliorer l'image environnementale</li>
-                    </ul>
-                    <p>Pour La Poste, c'est un outil essentiel pour atteindre la neutralité carbone d'ici 2040.</p>
+            <div class="categories-grid faq-general">
+                <div class="category-card faq-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-icon">🌍</div>
+                    <h3 class="category-title">Qu'est-ce qu'un bilan GES ?</h3>
+                    <p class="category-description">Un inventaire des émissions de gaz à effet de serre générées par les activités d'une organisation</p>
+                    <div class="faq-answer" style="display: none;">
+                        <p>Un <strong>bilan GES</strong> permet d'identifier les principales sources d'émissions, définir une stratégie de réduction, suivre les progrès et améliorer l'image environnementale. Pour La Poste, c'est essentiel pour atteindre la neutralité carbone d'ici 2040.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Qui peut utiliser cet outil ?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Cet outil est destiné à <strong>toutes les entités de La Poste</strong> :</p>
-                    <ul>
-                        <li>Bureaux de poste</li>
-                        <li>Centres de tri et de distribution</li>
-                        <li>Plateformes logistiques</li>
-                        <li>Services administratifs</li>
-                        <li>Filiales et sites industriels</li>
-                    </ul>
-                    <p>Il peut être utilisé par les responsables environnement, les contrôleurs de gestion, ou toute personne en charge du pilotage énergétique.</p>
+                
+                <div class="category-card faq-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="category-icon">👥</div>
+                    <h3 class="category-title">Qui peut utiliser cet outil ?</h3>
+                    <p class="category-description">Toutes les entités de La Poste : bureaux, centres de tri, plateformes logistiques...</p>
+                    <div class="faq-answer" style="display: none;">
+                        <p>L'outil est destiné à <strong>toutes les entités La Poste</strong> : bureaux de poste, centres de tri, plateformes logistiques, services administratifs, filiales. Il peut être utilisé par les responsables environnement, contrôleurs de gestion, ou toute personne en charge du pilotage énergétique.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>L'utilisation de l'outil est-elle gratuite ?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Oui, l'outil est <strong>entièrement gratuit</strong> pour toutes les entités de La Poste. Il fait partie de la stratégie groupe pour accompagner la transition écologique.</p>
-                    <p>Un support technique et méthodologique est également disponible sans frais supplémentaires.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Questions d'utilisation -->
-        <div class="faq-category" data-category="utilisation">
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Quelles données dois-je collecter avant de commencer ?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Préparez les données suivantes pour l'année de référence :</p>
-                    <div class="data-grid">
-                        <div class="data-category">
-                            <h4>🏢 Bâtiments</h4>
-                            <ul>
-                                <li>Factures électricité (kWh)</li>
-                                <li>Factures gaz naturel (kWh ou m³)</li>
-                                <li>Factures fioul (litres)</li>
-                                <li>Surface des locaux (m²)</li>
-                            </ul>
-                        </div>
-                        <div class="data-category">
-                            <h4>🚗 Véhicules</h4>
-                            <ul>
-                                <li>Nombre par type (essence/diesel/électrique)</li>
-                                <li>Kilométrages annuels</li>
-                                <li>Consommations de carburant</li>
-                            </ul>
-                        </div>
-                        <div class="data-category">
-                            <h4>👥 Personnel</h4>
-                            <ul>
-                                <li>Nombre d'employés</li>
-                                <li>Habitudes de transport domicile-travail</li>
-                                <li>Kilomètres déplacements professionnels</li>
-                            </ul>
-                        </div>
+                
+                <div class="category-card faq-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-icon">💰</div>
+                    <h3 class="category-title">L'outil est-il gratuit ?</h3>
+                    <p class="category-description">Oui, entièrement gratuit pour toutes les entités La Poste</p>
+                    <div class="faq-answer" style="display: none;">
+                        <p><strong>Oui, l'outil est entièrement gratuit</strong> pour toutes les entités La Poste. Il fait partie de la stratégie groupe pour accompagner la transition écologique. Un support technique et méthodologique est également disponible sans frais supplémentaires.</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Combien de temps faut-il pour réaliser un bilan ?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>La durée dépend de la taille de votre entité et de la disponibilité des données :</p>
-                    <ul>
-                        <li><strong>Petit bureau de poste</strong> : 2-3 heures</li>
-                        <li><strong>Centre de tri moyen</strong> : 1 journée</li>
-                        <li><strong>Grande plateforme logistique</strong> : 2-3 jours</li>
-                    </ul>
-                    <p>La collecte des données représente généralement 70% du temps total.</p>
+        <!-- Section FAQ - Utilisation -->
+        <section class="categories-section faq-utilisation" data-aos="fade-up" data-aos-delay="300">
+            <h2 class="section-title">Utilisation de l'outil</h2>
+            
+            <div class="categories-grid">
+                <div class="category-card faq-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-icon">📋</div>
+                    <h3 class="category-title">Quelles données collecter ?</h3>
+                    <p class="category-description">Factures énergétiques, kilométrages, nombre d'employés...</p>
+                    <div class="faq-answer" style="display: none;">
+                        <ul>
+                            <li><strong>🏢 Bâtiments :</strong> factures électricité/gaz, surface des locaux</li>
+                            <li><strong>🚗 Véhicules :</strong> nombre par type, kilométrages, consommations</li>
+                            <li><strong>👥 Personnel :</strong> nombre d'employés, habitudes transport</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="category-card faq-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="category-icon">⏱️</div>
+                    <h3 class="category-title">Combien de temps ?</h3>
+                    <p class="category-description">De 2h à 3 jours selon la taille de votre entité</p>
+                    <div class="faq-answer" style="display: none;">
+                        <ul>
+                            <li><strong>Petit bureau :</strong> 2-3 heures</li>
+                            <li><strong>Centre moyen :</strong> 1 journée</li>
+                            <li><strong>Grande plateforme :</strong> 2-3 jours</li>
+                        </ul>
+                        <p>La collecte des données représente 70% du temps total.</p>
+                    </div>
+                </div>
+                
+                <div class="category-card faq-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-icon">💾</div>
+                    <h3 class="category-title">Sauvegarder mon travail ?</h3>
+                    <p class="category-description">Sauvegarde automatique et possibilité d'export Excel</p>
+                    <div class="faq-answer" style="display: none;">
+                        <p>L'outil dispose d'une <strong>sauvegarde automatique</strong> locale. Vous pouvez exporter au format Excel et reprendre sur le même ordinateur. ⚠️ Évitez de changer d'ordinateur en cours de saisie.</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Puis-je sauvegarder mon travail et reprendre plus tard ?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Oui, l'outil dispose d'une fonction de <strong>sauvegarde automatique</strong> qui préserve vos données localement dans votre navigateur.</p>
-                    <p>Vous pouvez également :</p>
-                    <ul>
-                        <li>Exporter vos données au format Excel</li>
-                        <li>Sauvegarder manuellement à tout moment</li>
-                        <li>Reprendre votre travail sur le même ordinateur</li>
-                    </ul>
-                    <p><em>⚠️ Attention : les données sont stockées localement. Évitez de changer d'ordinateur en cours de saisie.</em></p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Questions sur les calculs -->
-        <div class="faq-category" data-category="calculs">
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Sur quoi se basent les facteurs d'émission utilisés ?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>L'outil utilise la <strong>Base Carbone® de l'ADEME</strong>, référence française officielle pour les facteurs d'émission.</p>
-                    <div class="factor-examples">
-                        <h4>Exemples de facteurs d'émission :</h4>
+        <!-- Section FAQ - Calculs -->
+        <section class="categories-section faq-calculs" data-aos="fade-up" data-aos-delay="400">
+            <h2 class="section-title">Calculs et méthodologie</h2>
+            
+            <div class="categories-grid">
+                <div class="category-card faq-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-icon">🔬</div>
+                    <h3 class="category-title">Base des facteurs d'émission</h3>
+                    <p class="category-description">Base Carbone® de l'ADEME, référence officielle française</p>
+                    <div class="faq-answer" style="display: none;">
+                        <p>L'outil utilise la <strong>Base Carbone® de l'ADEME</strong>, mise à jour annuellement :</p>
                         <ul>
                             <li>Électricité France : 0,0577 kg CO2eq/kWh</li>
                             <li>Gaz naturel : 0,227 kg CO2eq/kWh</li>
@@ -214,232 +197,258 @@
                             <li>Diesel : 3,16 kg CO2eq/litre</li>
                         </ul>
                     </div>
-                    <p>Ces facteurs sont <strong>mis à jour annuellement</strong> et intègrent l'analyse du cycle de vie complet.</p>
                 </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Comment sont calculées les émissions des déplacements domicile-travail ?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Le calcul se base sur la formule :</p>
-                    <div class="formula">
-                        <strong>Émissions = Nombre d'employés × Distance moyenne × 2 × Jours travaillés × Facteur d'émission moyen</strong>
+                
+                <div class="category-card faq-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="category-icon">🏠</div>
+                    <h3 class="category-title">Calcul domicile-travail</h3>
+                    <p class="category-description">Employés × Distance × 2 × Jours × Facteur d'émission</p>
+                    <div class="faq-answer" style="display: none;">
+                        <p><strong>Formule :</strong> Nb employés × Distance moyenne × 2 × Jours travaillés × FE moyen</p>
+                        <ul>
+                            <li>Voiture individuelle : 0,193 kg CO2eq/km</li>
+                            <li>Transport en commun : 0,103 kg CO2eq/km</li>
+                            <li>Train : 0,0246 kg CO2eq/km</li>
+                            <li>Vélo/marche : 0 kg CO2eq/km</li>
+                        </ul>
                     </div>
-                    <p>Le facteur d'émission moyen est déterminé selon la répartition des modes de transport :</p>
-                    <ul>
-                        <li>Voiture individuelle : 0,193 kg CO2eq/km</li>
-                        <li>Transport en commun : 0,103 kg CO2eq/km</li>
-                        <li>Train : 0,0246 kg CO2eq/km</li>
-                        <li>Vélo/marche : 0 kg CO2eq/km</li>
-                    </ul>
                 </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Pourquoi mes émissions semblent-elles élevées ?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Plusieurs raisons peuvent expliquer des émissions importantes :</p>
-                    <ul>
-                        <li><strong>Périmètre large</strong> : Le calcul inclut tous les Scopes 1, 2 et 3</li>
-                        <li><strong>Facteurs conservateurs</strong> : Les facteurs d'émission intègrent l'incertitude</li>
-                        <li><strong>Première mesure</strong> : Avant optimisation, les émissions reflètent la situation actuelle</li>
-                        <li><strong>Activité intensive</strong> : Certaines activités (transport, chauffage) sont naturellement émettrices</li>
-                    </ul>
-                    <p>L'important est d'avoir une <strong>baseline</strong> pour mesurer les progrès futurs.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Questions sur les résultats -->
-        <div class="faq-category" data-category="resultats">
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Comment interpréter mes résultats ?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Analysez vos résultats selon plusieurs angles :</p>
-                    <div class="analysis-grid">
-                        <div class="analysis-item">
-                            <h4>📊 Répartition par poste</h4>
-                            <p>Identifiez les 3 postes principaux d'émissions pour concentrer vos efforts</p>
-                        </div>
-                        <div class="analysis-item">
-                            <h4>👥 Émissions par employé</h4>
-                            <p>Comparez-vous aux benchmarks sectoriels (moyenne : 3-8 tCO2eq/employé/an)</p>
-                        </div>
-                        <div class="analysis-item">
-                            <h4>⚡ Intensité énergétique</h4>
-                            <p>Évaluez la performance énergétique de vos bâtiments (kWh/m²/an)</p>
-                        </div>
-                        <div class="analysis-item">
-                            <h4>🎯 Objectifs</h4>
-                            <p>Définissez des cibles de réduction réalistes (5-10% par an)</p>
-                        </div>
+                
+                <div class="category-card faq-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-icon">📈</div>
+                    <h3 class="category-title">Émissions élevées ?</h3>
+                    <p class="category-description">Normal pour une première mesure avant optimisation</p>
+                    <div class="faq-answer" style="display: none;">
+                        <ul>
+                            <li><strong>Périmètre large :</strong> Scopes 1, 2 et 3 inclus</li>
+                            <li><strong>Facteurs conservateurs :</strong> Intègrent l'incertitude</li>
+                            <li><strong>Première mesure :</strong> Avant optimisation</li>
+                        </ul>
+                        <p>L'important est d'avoir une <strong>baseline</strong> pour mesurer les progrès.</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Que faire avec mes résultats ?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Exploitez vos résultats pour :</p>
-                    <ol>
-                        <li><strong>Établir un plan d'actions</strong> priorisé par impact/coût</li>
-                        <li><strong>Communiquer</strong> auprès de vos équipes et partenaires</li>
-                        <li><strong>Suivre les progrès</strong> en refaisant le bilan annuellement</li>
-                        <li><strong>Remonter les données</strong> au niveau groupe si demandé</li>
-                        <li><strong>Former vos collaborateurs</strong> aux enjeux carbone</li>
-                    </ol>
-                    <p>L'outil génère automatiquement des <strong>recommandations personnalisées</strong> selon votre profil.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Questions techniques -->
-        <div class="faq-category" data-category="technique">
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Quels navigateurs sont compatibles ?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>L'outil fonctionne sur tous les navigateurs modernes :</p>
-                    <ul>
-                        <li>Chrome 60+ ✅</li>
-                        <li>Firefox 55+ ✅</li>
-                        <li>Safari 12+ ✅</li>
-                        <li>Edge 79+ ✅</li>
-                    </ul>
-                    <p>JavaScript doit être activé. Pour une expérience optimale, nous recommandons Chrome ou Firefox.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Mes données sont-elles sécurisées ?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Oui, la sécurité des données est notre priorité :</p>
-                    <ul>
-                        <li><strong>Stockage local</strong> : Vos données restent sur votre ordinateur</li>
-                        <li><strong>Pas de transmission</strong> : Aucune donnée n'est envoyée sur Internet</li>
-                        <li><strong>Chiffrement</strong> : Les sauvegardes sont chiffrées localement</li>
-                        <li><strong>Anonymisation</strong> : Seuls les résultats agrégés peuvent être partagés</li>
-                    </ul>
-                    <p>Vous gardez le contrôle total de vos informations.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Comment obtenir de l'aide ou signaler un problème ?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Plusieurs canaux de support sont disponibles :</p>
-                    <div class="support-options">
-                        <div class="support-item">
-                            <h4>📧 Support technique</h4>
-                            <p>Email : <strong>ges-support@laposte.fr</strong></p>
-                            <p>Réponse sous 24h ouvrées</p>
-                        </div>
-                        <div class="support-item">
-                            <h4>📚 Documentation</h4>
-                            <p>Guides et tutoriels disponibles</p>
-                            <p>FAQ mise à jour régulièrement</p>
-                        </div>
-                        <div class="support-item">
-                            <h4>🎯 Formation</h4>
-                            <p>Sessions d'accompagnement</p>
-                            <p>Webinaires mensuels</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Section d'aide rapide -->
-    <section class="quick-help" data-aos="fade-up" data-aos-delay="300">
-        <h2 class="section-title">Besoin d'aide rapide ?</h2>
-        
-        <div class="help-cards">
-            <div class="help-card">
-                <div class="help-icon">🚀</div>
-                <h3>Guide de démarrage</h3>
-                <p>Tutoriel pas-à-pas pour votre premier bilan</p>
-                <a href="outil.html" class="help-link">Commencer</a>
-            </div>
+        <!-- Section FAQ - Résultats -->
+        <section class="categories-section faq-resultats" data-aos="fade-up" data-aos-delay="500">
+            <h2 class="section-title">Interprétation des résultats</h2>
             
-            <div class="help-card">
-                <div class="help-icon">📞</div>
-                <h3>Contacter le support</h3>
-                <p>Équipe dédiée pour vous accompagner</p>
-                <a href="contact.html" class="help-link">Contacter</a>
+            <div class="categories-grid">
+                <div class="category-card faq-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-icon">📊</div>
+                    <h3 class="category-title">Comment interpréter ?</h3>
+                    <p class="category-description">Analyser par poste, par employé, intensité énergétique</p>
+                    <div class="faq-answer" style="display: none;">
+                        <ul>
+                            <li><strong>📊 Par poste :</strong> Identifiez les 3 principales sources</li>
+                            <li><strong>👥 Par employé :</strong> 3-8 tCO2eq/employé/an (benchmark)</li>
+                            <li><strong>⚡ Énergétique :</strong> Performance bâtiments (kWh/m²/an)</li>
+                            <li><strong>🎯 Objectifs :</strong> Cibles réalistes (5-10% par an)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="category-card faq-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="category-icon">🎯</div>
+                    <h3 class="category-title">Que faire des résultats ?</h3>
+                    <p class="category-description">Plan d'actions, communication, suivi annuel</p>
+                    <div class="faq-answer" style="display: none;">
+                        <ol>
+                            <li><strong>Plan d'actions</strong> priorisé par impact/coût</li>
+                            <li><strong>Communication</strong> auprès des équipes</li>
+                            <li><strong>Suivi annuel</strong> des progrès</li>
+                            <li><strong>Remontée groupe</strong> si demandé</li>
+                            <li><strong>Formation</strong> des collaborateurs</li>
+                        </ol>
+                        <p>L'outil génère des <strong>recommandations personnalisées</strong>.</p>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <!-- Section FAQ - Technique -->
+        <section class="categories-section faq-technique" data-aos="fade-up" data-aos-delay="600">
+            <h2 class="section-title">Questions techniques</h2>
             
-            <div class="help-card">
-                <div class="help-icon">📖</div>
-                <h3>En savoir plus</h3>
-                <p>Comprendre les enjeux et la méthodologie</p>
-                <a href="apropos.html" class="help-link">Découvrir</a>
+            <div class="categories-grid">
+                <div class="category-card faq-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-icon">🌐</div>
+                    <h3 class="category-title">Navigateurs compatibles</h3>
+                    <p class="category-description">Chrome, Firefox, Safari, Edge</p>
+                    <div class="faq-answer" style="display: none;">
+                        <ul>
+                            <li>Chrome 60+ ✅</li>
+                            <li>Firefox 55+ ✅</li>
+                            <li>Safari 12+ ✅</li>
+                            <li>Edge 79+ ✅</li>
+                        </ul>
+                        <p>JavaScript requis. Recommandation : Chrome ou Firefox.</p>
+                    </div>
+                </div>
+                
+                <div class="category-card faq-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="category-icon">🔒</div>
+                    <h3 class="category-title">Sécurité des données</h3>
+                    <p class="category-description">Stockage local, aucune transmission Internet</p>
+                    <div class="faq-answer" style="display: none;">
+                        <ul>
+                            <li><strong>Stockage local :</strong> Données sur votre ordinateur</li>
+                            <li><strong>Pas de transmission :</strong> Aucune donnée envoyée</li>
+                            <li><strong>Chiffrement :</strong> Sauvegardes sécurisées</li>
+                            <li><strong>Anonymisation :</strong> Seuls résultats agrégés partagés</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="category-card faq-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-icon">🆘</div>
+                    <h3 class="category-title">Obtenir de l'aide</h3>
+                    <p class="category-description">Support technique, documentation, formation</p>
+                    <div class="faq-answer" style="display: none;">
+                        <ul>
+                            <li><strong>📧 Email :</strong> ges-support@laposte.fr (24h)</li>
+                            <li><strong>📚 Documentation :</strong> Guides et tutoriels</li>
+                            <li><strong>🎯 Formation :</strong> Sessions et webinaires</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <!-- Section d'aide rapide -->
+        <section class="features-section" data-aos="fade-up" data-aos-delay="700">
+            <div class="features-list">
+                <h2 class="section-title">Besoin d'aide rapide ?</h2>
+                
+                <div class="features-items">
+                    <span class="feature-item-list" data-aos="fade-up" data-aos-delay="200">
+                        <span class="icon">🚀</span>
+                        <a href="outil.html" style="color: inherit; text-decoration: none;">Commencer maintenant</a>
+                    </span>
+                    
+                    <span class="feature-item-list" data-aos="fade-up" data-aos-delay="250">
+                        <span class="icon">📖</span>
+                        <a href="apropos.html" style="color: inherit; text-decoration: none;">Comprendre la méthodologie</a>
+                    </span>
+                    
+                    <span class="feature-item-list" data-aos="fade-up" data-aos-delay="300">
+                        <span class="icon">📞</span>
+                        Support : ges-support@laposte.fr
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section statistiques -->
+        <section class="features-section" data-aos="fade-up" data-aos-delay="800">
+            <div class="features-list">
+                <h2 class="section-title">En chiffres</h2>
+                
+                <div class="features-items">
+                    <span class="feature-item-list stats-item" data-aos="fade-up" data-aos-delay="200">
+                        <span class="icon stat-number">500+</span>
+                        Questions répondues
+                    </span>
+                    
+                    <span class="feature-item-list stats-item" data-aos="fade-up" data-aos-delay="250">
+                        <span class="icon stat-number">95%</span>
+                        Satisfaction utilisateurs
+                    </span>
+                    
+                    <span class="feature-item-list stats-item" data-aos="fade-up" data-aos-delay="300">
+                        <span class="icon stat-number">24h</span>
+                        Délai de réponse moyen
+                    </span>
+                    
+                    <span class="feature-item-list stats-item" data-aos="fade-up" data-aos-delay="350">
+                        <span class="icon stat-number">100+</span>
+                        Entités accompagnées
+                    </span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 La Poste - Tous droits réservés</p>
+            <p>Engagement pour la neutralité carbone</p>
         </div>
-    </section>
+    </footer>
 
-    <!-- Section statistiques -->
-    <section class="faq-stats" data-aos="fade-up" data-aos-delay="400">
-        <div class="stats-grid">
-            <div class="stat-item">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Questions répondues</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">95%</div>
-                <div class="stat-label">Satisfaction utilisateurs</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">24h</div>
-                <div class="stat-label">Délai de réponse moyen</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">100+</div>
-                <div class="stat-label">Entités accompagnées</div>
-            </div>
-        </div>
-    </section>
-</main>
+    <!-- Conteneur de notifications -->
+    <div id="notificationContainer" class="notification-container"></div>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-content">
-        <p>&copy; 2025 La Poste - Tous droits réservés</p>
-        <p>Engagement pour la neutralité carbone</p>
-    </div>
-</footer>
+    <!-- Bouton back-to-top -->
+    <button id="backToTop" class="back-to-top" aria-label="Retour en haut">↑</button>
 
-<!-- Conteneur de notifications -->
-<div id="notificationContainer" class="notification-container"></div>
-
-<!-- Bouton back-to-top -->
-<button id="backToTop" class="back-to-top" aria-label="Retour en haut">↑</button>
+    <script>
+        // Script pour rendre les cartes FAQ interactives et le filtrage
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqCards = document.querySelectorAll('.faq-card');
+            const filters = document.querySelectorAll('.faq-filter');
+            const sections = {
+                'general': document.querySelector('.faq-general'),
+                'utilisation': document.querySelector('.faq-utilisation'),
+                'calculs': document.querySelector('.faq-calculs'),
+                'resultats': document.querySelector('.faq-resultats'),
+                'technique': document.querySelector('.faq-technique')
+            };
+            
+            // Interaction avec les cartes FAQ (expand/collapse)
+            faqCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const answer = this.querySelector('.faq-answer');
+                    const isOpen = answer.style.display === 'block';
+                    
+                    // Fermer toutes les autres réponses
+                    faqCards.forEach(otherCard => {
+                        const otherAnswer = otherCard.querySelector('.faq-answer');
+                        otherAnswer.style.display = 'none';
+                        otherCard.classList.remove('expanded');
+                    });
+                    
+                    // Ouvrir/fermer la réponse actuelle
+                    if (!isOpen) {
+                        answer.style.display = 'block';
+                        this.classList.add('expanded');
+                    }
+                });
+            });
+            
+            // Filtrage par catégorie
+            filters.forEach(filter => {
+                filter.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    
+                    // Mise à jour de l'état actif
+                    filters.forEach(f => f.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Affichage/masquage des sections
+                    Object.keys(sections).forEach(sectionKey => {
+                        const section = sections[sectionKey];
+                        if (section) {
+                            if (category === 'all' || category === sectionKey) {
+                                section.style.display = 'block';
+                            } else {
+                                section.style.display = 'none';
+                            }
+                        }
+                    });
+                    
+                    // Fermer toutes les réponses ouvertes
+                    faqCards.forEach(card => {
+                        const answer = card.querySelector('.faq-answer');
+                        answer.style.display = 'none';
+                        card.classList.remove('expanded');
+                    });
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
